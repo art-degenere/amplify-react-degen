@@ -28,6 +28,16 @@
   color: #61dafb;
 }
 
+.degen-tile {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  align-items: center;
+  border: 1px solid black;
+  margin: 50px auto;
+  padding-bottom: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

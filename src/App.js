@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Notes App</h1>
+      <h1>Art dégénéré</h1>
       <input
         onChange={e => setFormData({ ...formData, 'name': e.target.value})}
         placeholder="Note name"
@@ -74,13 +74,13 @@ function App() {
       <div style={{marginBottom: 30}}>
         {
           notes.map(note => (
-            <div key={note.id || note.name}>
+            <div class="degen-tile" key={note.id || note.name}>
               <h2>{note.name}</h2>
-              <p>{note.description}</p>
-              <button onClick={() => deleteNote(note)}>Delete note</button>
               {
                 note.image && <img src={note.image} style={{width: 400}} />
               }
+              <p>{note.description}</p>
+              <button onClick={() => deleteNote(note)}>Delete note</button>
             </div>
           ))
         }
